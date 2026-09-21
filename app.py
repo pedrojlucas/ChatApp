@@ -5,7 +5,7 @@ from ollama import Client
 st.set_page_config(page_title="Private chat with Ollama Cloud", page_icon="☁️")
 
 st.title("☁️ Chat with Ollama Cloud")
-st.write("Your chats are not stored beyond this screen and the model used is open source."
+st.write("Your chats are not stored beyond this screen and the model used is open source.")
 
 # Configuración de la API Key de Ollama de forma segura
 api_key = os.getenv("OLLAMA_API_KEY")

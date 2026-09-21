@@ -2,10 +2,10 @@ import os
 import streamlit as st
 from ollama import Client
 
-st.set_page_config(page_title="Chat Privado con Ollama Cloud", page_icon="☁️")
+st.set_page_config(page_title="Private chat with Ollama Cloud", page_icon="☁️")
 
-st.title("☁️ Chat con Ollama Cloud")
-st.write("Tus peticiones se envían de forma remota a los modelos alojados en la nube de Ollama.")
+st.title("☁️ Chat with Ollama Cloud")
+st.write("Your chats are not stored beyond this screen and the model used is open source."
 
 # Configuración de la API Key de Ollama de forma segura
 api_key = os.getenv("OLLAMA_API_KEY")
@@ -58,4 +58,4 @@ if prompt := st.chat_input("¿Qué quieres consultar?"):
             st.session_state.messages.append({"role": "assistant", "content": response})
             
         except Exception as e:
-            st.error(f"Error al conectar con Ollama Cloud: {e}")
+            st.error(f"Error connecting to the cloud: {e}")
